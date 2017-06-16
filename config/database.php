@@ -55,7 +55,7 @@ return [
         'mysql' => [
             'driver'    => 'mysql',
             'host'      => env('DB_HOST', 'localhost'),
-            'database'  => env('DB_DATABASE', 'ayoov3'),
+            'database'  => env('DB_DATABASE', 'ayoov3_backendDB'),
             'username'  => env('DB_USERNAME', 'root'),
             'password'  => env('DB_PASSWORD', 'sm1l1ngs4thew3Ak'),
             'port'      => env('DB_PORT', '3306'),

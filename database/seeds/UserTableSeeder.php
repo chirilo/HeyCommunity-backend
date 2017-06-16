@@ -14,21 +14,53 @@ class UserTableSeeder extends Seeder
         $faker = Faker\Factory::create();
 
         \App\User::create([
-            'nickname'      =>      'Rod',
-            'avatar'        =>      'assets/images/userAvatar-default.png',
-            'email'         =>      'supgeek.rod@gmail.com',
-            'phone'         =>      '17090402884',
+            'nickname'      =>      'Chi Rilo',
+            'avatar'        =>      'assets/images/Chi.jpg',
+            'email'         =>      'chithewebdeveloper@gmail.com',
+            'phone'         =>      '09010000001',
             'password'      =>      bcrypt('123123'),
         ]);
         \App\User::create([
-            'nickname'      =>      'Test User',
-            'avatar'        =>      'assets/images/userAvatar-default.png',
-            'email'         =>      'test@hey-community.cn',
-            'phone'         =>      '12312341234',
-            'password'      =>      Hash::make('123123'),
+            'nickname'      =>      'Kim Co',
+            'avatar'        =>      'assets/images/Kim.jpg',
+            'email'         =>      'kim@ayoo.club',
+            'phone'         =>      '00000000002',
+            'password'      =>      bcrypt('123123'),
         ]);
 
-        foreach (range(1, 6) as $index) {
+        \App\User::create([
+            'nickname'      =>      'Jeth Ro',
+            'avatar'        =>      'assets/images/Jethro.jpg',
+            'email'         =>      'jethro@ayoo.club',
+            'phone'         =>      '00000000003',
+            'password'      =>      bcrypt('123123'),
+        ]);
+
+        \App\User::create([
+            'nickname'      =>      'Jane Askin',
+            'avatar'        =>      'assets/images/Jane.jpg',
+            'email'         =>      'jane@ayoo.club',
+            'phone'         =>      '00000000004',
+            'password'      =>      bcrypt('123123'),
+        ]);
+
+        \App\User::create([
+            'nickname'      =>      'Neil Bonoti',
+            'avatar'        =>      'assets/images/Neil.jpg',
+            'email'         =>      'neil@ayoo.club',
+            'phone'         =>      '00000000005',
+            'password'      =>      bcrypt('123123'),
+        ]);
+
+        \App\User::create([
+            'nickname'      =>      'App Tester',
+            'avatar'        =>      'assets/images/userAvatar-default.png',
+            'email'         =>      'test@ayoo.club',
+            'phone'         =>      '00000000006',
+            'password'      =>      Hash::make('123123'),
+        ]);        
+
+        foreach (range(1, 3) as $index) {
 
             if (env('FAKER_IMAGE_SAVE')) {
                 $imgUrl = $faker->image(storage_path('app/uploads/avatars'), 300, 300, 'people');
@@ -42,7 +74,7 @@ class UserTableSeeder extends Seeder
                 'avatar'        =>  $imgUrl,
                 'email'         =>  $faker->email(),
                 'phone'         =>  $faker->phoneNumber(),
-                'password'      =>  bcrypt('hey community'),
+                'password'      =>  bcrypt('ayoofakeuser'),
 
                 'created_at'    =>  $faker->dateTimeThisMonth(),
                 'updated_at'    =>  $faker->dateTimeThisMonth(),
